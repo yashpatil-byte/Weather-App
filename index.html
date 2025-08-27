@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-sky-400 to-blue-100 font-sans">
+
+  <!-- Title -->
+  <h1 class="text-4xl font-bold text-white mb-8 drop-shadow-lg">
+    🌦 Weather App
+  </h1>
+
+  <!-- Input + Buttons -->
+  <div class="flex space-x-2">
+    <input id="cityInput" 
+           type="text" 
+           placeholder="Enter city name"
+           class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-md">
+    <button id="getWeatherBtn" 
+            class="px-4 py-2 bg-sky-600 text-white rounded-lg shadow-md hover:bg-sky-700 transition">
+      Get Weather
+    </button>
+    <button id="getCurrentLocationBtn" 
+            class="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 transition">
+      Current Location
+    </button>
+  </div>
+
+  <!-- Recent Searches -->
+  <div id="recentSearches" class="mt-4 flex flex-wrap gap-2">
+    <!-- Recent search buttons will appear here -->
+  </div>
+
+  <!-- Theme Toggle -->
+<div class="absolute top-4 right-4">
+  <button id="themeToggle" class="px-3 py-1 bg-gray-200 rounded-lg shadow hover:bg-gray-300 transition">
+    🌙 Dark Mode
+  </button>
+</div>
+
+
+  <!-- Result Card -->
+  <div id="weatherResult" 
+       class="mt-8 w-80 p-6 bg-white rounded-2xl shadow-xl text-center hidden">
+    <!-- Weather details will be injected here -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
